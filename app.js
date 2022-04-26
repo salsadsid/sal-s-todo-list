@@ -12,7 +12,10 @@ filterOption.addEventListener('click', filterTodos)
 
 function addTodo(event) {
     event.preventDefault();
-
+    //check empty input
+    if (!todoInput.value) {
+        return;
+    }
     //Create div
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo');
